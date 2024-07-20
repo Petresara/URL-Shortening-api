@@ -79,8 +79,10 @@ ul li:first-child {
         align-items: center;
         gap: 1rem;
     }
-    .logo-img {
-        margin-left: -10px;
+    .logo {
+        margin-left: -130px;
+        padding-top: 20px;
+        padding-bottom: 0;
     }
 
     .footer-links {
