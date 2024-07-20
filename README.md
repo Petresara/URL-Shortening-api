@@ -1,5 +1,4 @@
 # URL-Shortening-api
-# URL Shortening-api
 
 ![alt text](desktop-preview.jpg)
 
@@ -43,7 +42,7 @@ Give a ⭐️ if you like this project!
 
 ## Live Demo
 
-[Live Demo Link](https://livedemo.com)
+[[Live Demo Link](https://livedemo.com)](https://url-shortening-links.netlify.app/)
 
 ## Acknowledgments
 
