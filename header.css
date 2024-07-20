@@ -1,102 +1,167 @@
-body {
-    font-family: 'Poppins', sans-serif;
-    font-size: 18px;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  header {
-    background-color: #fff;
-    padding: 20px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .container {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;700&display=swap");
+
+:root {
+    --cyan: hsl(180, 66%, 49%);
+    --dark-violet: hsl(257, 27%, 26%);
+    --red: hsl(0, 87%, 67%);
+    --gray: hsl(0, 0%, 75%);
+    --grayish-violet: hsl(257, 7%, 63%);
+    --very-dark-blue: hsl(255, 11%, 22%);
+    --very-dark-violet: hsl(260, 8%, 14%);
+}
+
+header {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    align-items: center;
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  
-  .logo {
-    font-size: 24px;
-    font-weight: 700;
-    color: hsl(257, 27%, 26%);
-  }
-  
-  nav ul {
+    padding: 20px 180px;
+    margin-bottom: 50px;
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 24px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: #000;
+}
+
+.nav-menu {
     display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.left {
+    display: flex;
+}
+
+.left ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  nav ul li {
-    margin-left: 20px;
-  }
-  
-  nav ul li a {
+    font-weight: 700;
+}
+
+.left ul a {
     text-decoration: none;
-    color: hsl(257, 7%, 63%);
-    font-weight: 500;
-  }
-  
-  nav ul li a:hover {
-    color: hsl(257, 27%, 26%);
-  }
-  
-  .auth-links {
+    padding: 3px 16px;
+    color: var(--grayish-violet);
+    cursor: pointer;
+}
+
+.nav-logo {
+    margin-right: 40px;
+    margin-left: -20px;
+}
+
+.nav-link.active:hover {
+    background-color: #b1f7f7;
+}
+
+.sm {
+    display: none;
+}
+
+.right {
+    display: flex;
+}
+
+.right ul {
     display: flex;
     align-items: center;
-  }
-  
-  .auth-links a {
+    list-style: none;
+}
+
+.right ul a {
     text-decoration: none;
-    margin-left: 20px;
-    font-weight: 500;
-  }
-  
-  .login {
-    color: hsl(257, 7%, 63%);
-  }
-  
-  .signup {
-    background-color: hsl(180, 66%, 49%);
+    padding: 3px 16px;
+    color: var(--grayish-violet);
+    cursor: pointer;
+}
+
+.right ul .active {
+    background: var(--cyan);
+    padding: 6px 20px;
+    border-radius: 16px;
     color: #fff;
-    padding: 10px 20px;
-    border-radius: 50px;
-    transition: background-color 0.3s;
-  }
-  
-  .signup:hover {
-    background-color: hsl(180, 66%, 69%);
-  }
-  
-  @media (max-width: 375px) {
-    .container {
-      flex-direction: column;
-      align-items: flex-start;
+    cursor: pointer;
+    transition: background-color 0.4s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        cursor: pointer;
     }
-  
-    nav ul {
-      flex-direction: column;
-      margin-top: 20px;
+
+    .nav-menu {
+        position: absolute;
+        width: 100%;
+        top: 90px;
+        left: 357px;
+        transform: translateX(-100%);
+        flex-direction: column;
+        text-align: center;
+        background-color: var(--dark-violet);
+        transition: 0.4s ease;
+        padding: 20px;
+        border-radius: 12px;
     }
-  
-    nav ul li {
-      margin: 10px 0;
+
+    .nav-menu.active {
+        left: 0;
     }
-  
-    .auth-links {
-      flex-direction: column;
-      margin-top: 20px;
+
+    .nav-item {
+        margin: 16px 0;
     }
-  
-    .auth-links a {
-      margin: 10px 0;
+
+    .nav-logo {
+        padding: 10px 30px;
     }
-  }
-  
+
+    .nav-item:nth-child(3)::after {
+        content: "";
+        display: block;
+        border-bottom: 0.2px solid var(--grayish-violet);
+        margin-top: 30px;
+        padding: 0px 140px;
+    }
+
+    .nav-item .nav-link {
+        color: #fff;
+    }
+
+    .sm {
+        display: block;
+    }
+
+    .left ul .nav-link.active {
+        background: var(--cyan);
+        padding: 8px 100px;
+        border-radius: 20px;
+        color: #fff;
+    }
+
+    .right {
+        display: none;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        z-index: 1;
+        width: 90%;
+        padding-top: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

@@ -6,53 +6,88 @@
     <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <div id="header"></div> 
+    <main>
+        <section class="features-section">
+            <div class="features-content">
+                <h1 class="features-title">More than just shorter links</h1>
+                <p class="features-text">Build your brand’s recognition and get detailed insights on how your links are
+                    performing.</p>
+                <button class="features-content-btn">Get Started</button>
+            </div>
+            <div class="features-image">
+            <img src="images/illustration-working.svg">
+        </div>
+        </section>
+        <section class="shorten-section">
+            <div class="shorten-container">
+                <form id="shortenForm">
+                    <input type="text" id="linkInput" placeholder="Shorten a link here...">
+                    <button type="submit" class="btn btn-secondary">Shorten It!</button>
+                </form>
+            </div>
+            <div class="shorten-links">
+                <p id="errorMessage" class="error-message"></p>
+                <div id="shortenResults" class="shorten-results">
+                </div>
+            </div>
+        </section>
+        <section class="statistics-section">
+            <div class="stats-container">
+                <h1 class="statistic__section-title">Advanced Statistics</h1>
+                <p class="statistic__section-description">Track how your links are performing across the web with our advanced
+                  statistics dashboard.</p>
+            </div>
+            <div class="statistics-cards-container">
+                <div class="statistics-card">
+                    <div class="stats-card-img">
+                        <img src="images/icon-brand-recognition.svg" alt="">
+                    </div>
+                    <h3 class="statistics-title">Brand Recognition</h3>
+                    <p class="statistics-text">
+                        Boost your brand recognition with each click. Generic links don’t mean a thing. Branded links
+                        help instil confidence in your content.
+                    </p>
+                </div>
 
-<main>
- <section>
-    <div>
-    <h1>More than just shorter links</h1>
-  
-    Build your brand’s recognition and get detailed insights 
-    on how your links are performing.
-</div>
-  
-    Get Started
-</section>
-<section>
-    Shorten a link here...
-  
-    Shorten It!
-</section>
-<section>
-    Advanced Statistics
-  
-    Track how your links are performing across the web with our 
-    advanced statistics dashboard.
-  
-    Brand Recognition
-  
-    Boost your brand recognition with each click. Generic links don’t 
-    mean a thing. Branded links help instil confidence in your content.
-  
-    Detailed Records
-  
-    Gain insights into who is clicking your links. Knowing when and where 
-    people engage with your content helps inform better decisions.
-  
-    Fully Customizable
-  
-    Improve brand awareness and content discoverability through customizable 
-    links, supercharging audience engagement.
-</section>
-    Boost your links today
-  
-    Get Started
-  </main>
+                <div class="statistics-card">
+                    <div class="stats-card-img">
+                        <img src="images/icon-detailed-records.svg" alt="">
+                    </div>
+                    <h3 class="statistics-title">Detailed Records</h3>
+                    <p class="statistics-text">
+                        Gain insights into who is clicking your links. Knowing when and where people engage with your
+                        content helps inform better decisions.
+                    </p>
+                </div>
 
-<script src="script.js"></script>
+                <div class="statistics-card">
+                    <div class="stats-card-img">
+                        <img src="images/icon-fully-customizable.svg" alt="">
+                    </div>
+                    <h3 class="statistics-title">Fully Customizable</h3>
+                    <p class="statistics-text">
+                        Improve brand awareness and content discoverability through customizable links, supercharging
+                        audience engagement.
+                    </p>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section class="boost-section">
+            <div class="boost-links">
+                <h2 class="boost-links-title">Boost your links today</h2>
+                <button class="btn btn-primary">Get Started</button>
+            </div>
+        </section>
+    </main>
+    <div id="footer"></div>
+    <script src="script.js"></script>
 </body>
 </html>
