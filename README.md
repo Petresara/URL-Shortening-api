@@ -28,8 +28,8 @@ You can host your site using one of these solutions or any of our other trusted 
 
 👤 **Author1**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [[@githubhandle](https://github.com/githubhandle)](https://github.com/Petresara)
+- LinkedIn: [[LinkedIn](https://linkedin.com/in/linkedinhandle)](https://www.linkedin.com/in/sara-petreska-28bba7304/)
 
 ## 🤝 Contributing
 
