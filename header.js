@@ -14,4 +14,4 @@ navLinks.forEach(link => {
         navMenu.classList.remove('active');
         hamburger.classList.remove('active');
     });
-
+});
