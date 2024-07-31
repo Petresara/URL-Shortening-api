@@ -3,19 +3,21 @@
 :root {
     --cyan: hsl(180, 66%, 49%);
     --dark-violet: hsl(257, 27%, 26%);
-    --red: hsl(0, 87%, 67%);
-    --gray: hsl(0, 0%, 75%);
     --grayish-violet: hsl(257, 7%, 63%);
-    --very-dark-blue: hsl(255, 11%, 22%);
-    --very-dark-violet: hsl(260, 8%, 14%);
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 180px;
-    margin-bottom: 50px;
+    padding: 20px 10vw;
+    margin-bottom: 5vh;
 }
 
 .hamburger {
@@ -37,11 +39,11 @@ header {
     justify-content: space-around;
 }
 
-.left {
+.left, .right {
     display: flex;
 }
 
-.left ul {
+.left ul, .right ul {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -49,16 +51,16 @@ header {
     font-weight: 700;
 }
 
-.left ul a {
+.left ul a, .right ul a {
     text-decoration: none;
-    padding: 3px 16px;
+    padding: 0.5em 1em;
     color: var(--grayish-violet);
     cursor: pointer;
 }
 
 .nav-logo {
-    margin-right: 40px;
-    margin-left: -20px;
+    margin-right: 2vw;
+    margin-left: -2vw;
 }
 
 .nav-link.active:hover {
@@ -69,99 +71,84 @@ header {
     display: none;
 }
 
-.right {
-    display: flex;
-}
-
-.right ul {
-    display: flex;
-    align-items: center;
-    list-style: none;
-}
-
-.right ul a {
-    text-decoration: none;
-    padding: 3px 16px;
-    color: var(--grayish-violet);
-    cursor: pointer;
-}
-
 .right ul .active {
     background: var(--cyan);
-    padding: 6px 20px;
-    border-radius: 16px;
+    padding: 0.5em 1.5em;
+    border-radius: 1em;
     color: #fff;
-    cursor: pointer;
     transition: background-color 0.4s ease-in-out;
 }
 
-@media (max-width: 768px) {
-    .hamburger {
-        display: block;
-        cursor: pointer;
-    }
-
-    .nav-menu {
-        position: absolute;
-        width: 100%;
-        top: 90px;
-        left: 357px;
-        transform: translateX(-100%);
-        flex-direction: column;
-        text-align: center;
-        background-color: var(--dark-violet);
-        transition: 0.4s ease;
-        padding: 20px;
-        border-radius: 12px;
-    }
-
-    .nav-menu.active {
-        left: 0;
-    }
-
-    .nav-item {
-        margin: 16px 0;
-    }
-
-    .nav-logo {
-        padding: 10px 30px;
-    }
-
-    .nav-item:nth-child(3)::after {
-        content: "";
-        display: block;
-        border-bottom: 0.2px solid var(--grayish-violet);
-        margin-top: 30px;
-        padding: 0px 140px;
-    }
-
-    .nav-item .nav-link {
-        color: #fff;
-    }
-
-    .sm {
-        display: block;
-    }
-
-    .left ul .nav-link.active {
-        background: var(--cyan);
-        padding: 8px 100px;
-        border-radius: 20px;
-        color: #fff;
-    }
-
-    .right {
-        display: none;
-    }
-
+@media (max-width: 1400px) {
     header {
-        display: flex;
-        justify-content: space-between;
-        position: fixed;
-        z-index: 1;
-        width: 90%;
-        padding-top: 20px;
-        padding-left: 10px;
-        padding-right: 10px;
+        padding: 2vh 5vw;
+    }
+
+    @media (max-width: 768px) {
+        .hamburger {
+            display: block;
+            cursor: pointer;
+        }
+
+        .nav-menu {
+            position: absolute;
+            width: 100%;
+            top: 60px;
+            left: 105%;
+            transform: translateX(-100%);
+            flex-direction: column;
+            text-align: center;
+            background-color: var(--dark-violet);
+            transition: 0.4s ease;
+            padding: 2em 0;
+            border-radius: 0.5em;
+        }
+
+        .nav-menu.active {
+            left: 0;
+        }
+
+        .nav-item {
+            margin: 1em 0;
+        }
+
+        .nav-logo {
+            padding: 0.5em 1.5em;
+        }
+
+        .nav-item:nth-child(3)::after {
+            content: "";
+            display: block;
+            border-bottom: 0.2px solid var(--grayish-violet);
+            margin-top: 1.5em;
+            padding: 0 7em;
+        }
+
+        .nav-item .nav-link {
+            color: #fff;
+        }
+
+        .sm {
+            display: block;
+        }
+
+        .left ul .nav-link.active {
+            background: var(--cyan);
+            padding: 0.8em 4em;
+            border-radius: 1.5em;
+            color: #fff;
+        }
+
+        .right {
+            display: none;
+        }
+
+        header {
+            position: fixed;
+            z-index: 1;
+            width: 90%;
+            padding: 1em 5%;
+            justify-content: space-between;
+        }
     }
 }
