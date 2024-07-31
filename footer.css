@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;700&display=swap");
+
 :root {
     --cyan: hsl(180, 66%, 49%);
     --dark-violet: hsl(257, 27%, 26%);
@@ -13,7 +15,7 @@ footer {
     flex-direction: row;
     align-items: start;
     background-color: var(--very-dark-violet);
-    padding: 30px;
+    padding: 1.875rem;
 }
 
 .logo {
@@ -21,15 +23,15 @@ footer {
     font-weight: 700;
     font-size: 30px;
     text-align: center;
-    height: 150px;
-    padding-left: 150px;
-    margin: auto 20px; 
+    height: 9.375rem;
+    padding-left: 9.375rem;
+    margin: auto 1.25rem; 
 }
 
 .footer-links-container {
     font-size: 15px;
     display: flex;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     align-items: stretch;
     width: 100%;
 }
@@ -40,12 +42,12 @@ footer {
 }
 
 .footer-links li {
-   margin-top: 10px;
+   margin-top: 0.625rem;
 }
 
 ul li {
     color: var(--grayish-violet);
-    margin: 0.2rem 0;
+    margin: 0.125rem 0;
     list-style: none;
 }
 
@@ -59,7 +61,7 @@ ul li:first-child {
     justify-content: space-between;
     align-items: center;
     margin-top: 2rem;
-    margin-right: 150px;
+    margin-right: 9.375rem;
 }
 
 .social-links {
@@ -80,8 +82,8 @@ ul li:first-child {
         gap: 1rem;
     }
     .logo {
-        margin-left: -130px;
-        padding-top: 20px;
+        margin-left: -8.125rem;
+        padding-top: 1.25rem;
         padding-bottom: 0;
     }
 
@@ -93,10 +95,46 @@ ul li:first-child {
     .footer-social {
         margin-top: 1rem;
         align-items: center;
-        margin-left: 150px;
+        margin-left: 9.375rem;
     }
 
     .social-links {
         margin: 0.5rem 0;
     }
+}
 
+@media (min-width: 768px) and (max-width: 1400px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 1.25rem;
+    }
+
+    .logo {
+        padding-left: 0;
+        margin: 0;
+        margin-bottom: 1.25rem;
+    }
+
+    .footer-links-container {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+
+    .footer-links {
+        text-align: center;
+        margin: 0;
+    }
+
+    .footer-social {
+        margin-top: 1.25rem;
+        margin-right: 0;
+        justify-content: center;
+    }
+
+    .social-links {
+        margin: 0 0.625rem;
+    }
+}
