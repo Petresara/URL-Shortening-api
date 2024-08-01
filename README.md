@@ -1,5 +1,5 @@
 # URL-Shortening-api
-![Desktop Preview](desktop-design.jpg)
+![Desktop Preview](design/desktop-design.jpg)
 
 
 ## Welcome 👋
