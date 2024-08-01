@@ -16,9 +16,13 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 1.25rem;
-    padding: 1.25rem 12vw;
+    gap: 1.50rem;
+    padding: 4rem 12vw;
     margin-bottom: 5vh;
+    position: static;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 .hamburger {
@@ -38,6 +42,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    z-index: 1;
 }
 
 .left, .right {
@@ -80,7 +85,7 @@ header {
     transition: background-color 0.4s ease-in-out;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1399px) {
     header {
         padding: 1.25rem 8vw;
     }
@@ -136,11 +141,7 @@ header {
     }
 
     header {
-        position: fixed;
-        z-index: 1;
-        width: 90%;
         padding: 8em 5%;
-        justify-content: space-between;
     }
 }
 
@@ -191,15 +192,11 @@ header {
     }
 
     header {
-        position: fixed;
-        z-index: 1;
-        width: 100%;
         padding: 1em 5%;
-        justify-content: space-between;
     }
 }
 
-@media (min-width: 768px) and (max-width: 1400px) {
+@media (min-width: 769px) and (max-width: 1400px) {
     header {
         padding: 1.25rem 10vw;
     }
