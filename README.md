@@ -1,6 +1,6 @@
 # URL-Shortening-api
+![Desktop Preview](desktop-design.jpg)
 
-![alt text](desktop-preview.jpg)
 
 ## Welcome 👋
 Thanks for checking out this front-end coding challenge.
