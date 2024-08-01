@@ -533,6 +533,7 @@ section {
 }
 
 @media (min-width: 768px) and (max-width: 1400px) {
+ 
     .features-section {
         display: flex;
         justify-content: space-between;
@@ -581,7 +582,7 @@ section {
     .statistics-cards-container:before {
         content: "";
         position: absolute;
-        top: 21vh;
+        top: 35%;
         left: 50px;
         right: 0;
         height: 8px;
