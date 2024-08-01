@@ -16,7 +16,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 10vw;
+    gap: 1.25rem;
+    padding: 1.25rem 12vw;
     margin-bottom: 5vh;
 }
 
@@ -26,9 +27,9 @@ header {
 
 .bar {
     display: block;
-    width: 24px;
-    height: 3px;
-    margin: 5px auto;
+    width: 1.5rem;
+    height: 0.1875rem;
+    margin: 0.3125rem auto;
     transition: all 0.3s ease-in-out;
     background-color: #000;
 }
@@ -59,8 +60,8 @@ header {
 }
 
 .nav-logo {
-    margin-right: 2vw;
-    margin-left: -2vw;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-link.active:hover {
@@ -81,74 +82,137 @@ header {
 
 @media (max-width: 1400px) {
     header {
-        padding: 2vh 5vw;
+        padding: 1.25rem 8vw;
     }
 
-    @media (max-width: 768px) {
-        .hamburger {
-            display: block;
-            cursor: pointer;
-        }
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
 
-        .nav-menu {
-            position: absolute;
-            width: 100%;
-            top: 60px;
-            left: 105%;
-            transform: translateX(-100%);
-            flex-direction: column;
-            text-align: center;
-            background-color: var(--dark-violet);
-            transition: 0.4s ease;
-            padding: 2em 0;
-            border-radius: 0.5em;
-        }
+    .nav-menu {
+        position: absolute;
+        width: 100%;
+        top: 60px;
+        left: 105%;
+        transform: translateX(-100%);
+        flex-direction: column;
+        text-align: center;
+        background-color: var(--dark-violet);
+        transition: 0.4s ease;
+        padding: 2em 0;
+        border-radius: 0.5em;
+    }
 
-        .nav-menu.active {
-            left: 0;
-        }
+    .nav-menu.active {
+        left: 0;
+    }
 
-        .nav-item {
-            margin: 1em 0;
-        }
+    .nav-item {
+        margin: 1em 0;
+    }
 
-        .nav-logo {
-            padding: 0.5em 1.5em;
-        }
+    .nav-logo {
+        padding: 0.5em 1.5em;
+    }
 
-        .nav-item:nth-child(3)::after {
-            content: "";
-            display: block;
-            border-bottom: 0.2px solid var(--grayish-violet);
-            margin-top: 1.5em;
-            padding: 0 7em;
-        }
+    .nav-item .nav-link {
+        color: #fff;
+    }
 
-        .nav-item .nav-link {
-            color: #fff;
-        }
+    .sm {
+        display: block;
+    }
 
-        .sm {
-            display: block;
-        }
+    .left ul .nav-link.active {
+        background: var(--cyan);
+        padding: 0.8em 4em;
+        border-radius: 1.5em;
+        color: #fff;
+    }
 
-        .left ul .nav-link.active {
-            background: var(--cyan);
-            padding: 0.8em 4em;
-            border-radius: 1.5em;
-            color: #fff;
-        }
+    .right {
+        display: none;
+    }
 
-        .right {
-            display: none;
-        }
+    header {
+        position: fixed;
+        z-index: 1;
+        width: 90%;
+        padding: 8em 5%;
+        justify-content: space-between;
+    }
+}
 
-        header {
-            position: fixed;
-            z-index: 1;
-            width: 90%;
-            padding: 1em 5%;
-            justify-content: space-between;
-        }
+@media (max-width: 768px) {
+    .nav-menu {
+        position: absolute;
+        width: 90%;
+        left: 97%;
+        top: 60px;
+        transform: translateX(-100%);
+        flex-direction: column;
+        text-align: center;
+        background-color: var(--dark-violet);
+        transition: 0.4s ease;
+        padding: 2em 0;
+        border-radius: 0.5em;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 1em 0;
+    }
+
+    .nav-logo {
+        padding: 0.5em 1.5em;
+    }
+
+    .nav-item .nav-link {
+        color: #fff;
+    }
+
+    .sm {
+        display: block;
+    }
+
+    .left ul .nav-link.active {
+        background: var(--cyan);
+        padding: 0.8em 4em;
+        border-radius: 1.5em;
+        color: #fff;
+    }
+
+    .right {
+        display: none;
+    }
+
+    header {
+        position: fixed;
+        z-index: 1;
+        width: 100%;
+        padding: 1em 5%;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1400px) {
+    header {
+        padding: 1.25rem 10vw;
+    }
+
+    .nav-menu {
+        justify-content: space-between;
+    }
+
+    .left ul a, .right ul a {
+        padding: 0.5em 1.25em;
+    }
+
+    .right ul .active {
+        padding: 0.5em 1.25em;
     }
 }
