@@ -85,7 +85,7 @@ header {
     transition: background-color 0.4s ease-in-out;
 }
 
-@media (max-width: 1399px) {
+@media (max-width: 1400px) {
     header {
         padding: 1.25rem 8vw;
     }
@@ -97,10 +97,10 @@ header {
 
     .nav-menu {
         position: absolute;
-        width: 100%;
+        width: 70%;
         top: 60px;
-        left: 105%;
-        transform: translateX(-100%);
+        left: 100%;
+        transform: translateX(-120%);
         flex-direction: column;
         text-align: center;
         background-color: var(--dark-violet);
